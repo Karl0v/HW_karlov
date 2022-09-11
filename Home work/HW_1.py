@@ -9,4 +9,4 @@ except Exception:
     q = input('введіть суму в USD = ')
 
 
-print('Мажор, в тебе аж цілих',round(float(q) * x),'UAH')
+print('Мажор, в тебе аж цілих',round(float(q) * x, 2),'UAH')
