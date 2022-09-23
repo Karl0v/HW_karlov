@@ -3,7 +3,7 @@
 while True:
     def in_put():
         a = input('введіть число = ')
-        if a.isdigit() == False:
+        if a.isalpha() == True:
             a = input('введіть число = ')
         b = input('Cкільки символів треба відрізати з права = ')
         if b.isdigit() == False:
