@@ -4,61 +4,39 @@
 
 import math
 
-a = input('Введіть сторону a = ')
-b = input('Введіть сторону b = ')
-c = input('Введіть сторону c = ')
-d = input('Введіть сторону d = ')
+while True:
+    a = input('Введіть сторону a = ')
+    b = input('Введіть сторону b = ')
+    c = input('Введіть сторону c = ')
+    d = input('Введіть сторону d = ')
+    if a.isnumeric() and b.isnumeric() and c.isnumeric() and d.isnumeric():
+        a = float(a)
+        b = float(b)
+        c = float(c)
+        d = float(d)
+        break
 
-if a.isalpha() or b.isalpha() or c.isalpha() or d.isalpha():
-    print('Введіть, будь ласка, цифри')
-    a = float(input('Введіть сторону a = '))
-    b = float(input('Введіть сторону b = '))
-    c = float(input('Введіть сторону c = '))
-    d = float(input('Введіть сторону d = '))
-else:
-    a = float(a)
-    b = float(b)
-    c = float(c)
-    d = float(d)
+    else:
+        print('Введіть, будь ласка, цифри')
 
 
-def square():
-    if a == b == c == d:
-        print('Введені вами данні говорять , що це - квадрат')
-        exit(0)
-square()
-
-a = pow(a, 2)
-b = pow(b, 2)
-c = pow(c, 2)
-d = pow(d, 2)
-
-
-def area():
-    s = round((a * b), 2)
+def area(a,b): #функція вираховує площу прямокутника
+    s = round(a * b), 2
     return s
 
 
-
-def sqrt():
-    x = math.sqrt(a + b)
-    y = math.sqrt(c + d)
-    if x == y:
-        print('Це прямокутник і його площа складає', area(), 'см')
-    else:
-        print('Введені вами данні показують, що це чотирикутник, але не прямокутник')
+def diagonal(a,b,c,d): #функція перевіряє рівність діагоналей
+    if (a**2 + b**2) == (c**2 + d**2):
+        return True
 
 
+def sides_is_equal(a,b,c,d): #функція перевіряє рівність сторін
+    if a == b == c == d:
+        return True
 
-print(sqrt())
-
-
-
-
-
-
-
-
-
-
-
+if diagonal(a,b,c,d) is True and sides_is_equal(a,b,c,d) is True:
+    print('Введені вами данні говорять , що це - квадрат')
+elif diagonal(a,b,c,d) is True and sides_is_equal(a,b,c,d) is not True:
+    print('Це прямокутник і його площа складає', area(a, b), 'см')
+else:
+    print('Введені вами данні показують, що це чотирикутник, але не прямокутник')
