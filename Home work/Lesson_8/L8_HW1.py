@@ -18,7 +18,7 @@ info()
 notes = 'Notepad'
 
 
-def note():
+def save():
     """
     Приймає у користувача інформацію і записує її у файл
     :return: робить запис
@@ -37,7 +37,7 @@ def loading():
         print(fp.read())
 
 
-def remove():
+def clear():
     """
     Видаляє всі збережені нотатки та сам файл зберігання нотаток
     :return: видалення
@@ -47,9 +47,9 @@ def remove():
 
 
 while True:
-    user_choise = input('Яку дію бажаєте виконати: > note > load > clear > info > exit >> ')
-    if user_choise.lower() == 'note':
-        note()
+    user_choise = input('Яку дію бажаєте виконати: > save > load > clear > info > exit >> ')
+    if user_choise.lower() == 'save':
+        save()
     elif user_choise.lower() == 'load':
         try:
             loading()
@@ -59,7 +59,7 @@ while True:
         try:
             ask = input('Ви впевнені, що хочете видалити файл y/n?\n >>> ')
             if ask == 'y':
-                remove()
+                clear()
                 print('\nВаш файл було видалено\n')
         except FileNotFoundError:
             print('\nВидалення не існуючого файлу не можливо\n')
