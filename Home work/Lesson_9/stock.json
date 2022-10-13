@@ -1,0 +1,124 @@
+{
+	"stock": [
+		{
+			"article": "A2301",
+			"name": "Handbag",
+			"category": "Leather goods",
+			"color": "Black",
+			"size": "XL",
+			"qty": 1
+		},
+		{
+			"article": "A2306",
+			"name": "Handbag",
+			"category": "Leather goods",
+			"color": "Black",
+			"size": "M",
+			"qty": 5
+		},
+		{
+			"article": "B2306",
+			"name": "Handbag",
+			"category": "Leather goods",
+			"color": "Orange",
+			"size": "XL",
+			"qty": 3
+		},
+		{
+			"article": "C4506",
+			"name": "Wallet",
+			"category": "Leather goods",
+			"color": "Grey",
+			"size": "S",
+			"qty": 5
+		},
+		{
+			"article": "C2236",
+			"name": "Wallet",
+			"category": "Leather goods",
+			"color": "Grey",
+			"size": "M",
+			"qty": 3
+		},
+		{
+			"article": "J2306",
+			"name": "Jacket",
+			"category": "RTW",
+			"color": "Black",
+			"size": "L",
+			"qty": 2
+		},
+		{
+			"article": "J2399",
+			"name": "Jacket",
+			"category": "RTW",
+			"color": "Black",
+			"size": "XL",
+			"qty": 1
+		},
+		{
+			"article": "J3476",
+			"name": "Jacket",
+			"category": "RTW",
+			"color": "White",
+			"size": "XL",
+			"qty": 6
+		},
+		{
+			"article": "P4446",
+			"name": "Pullover",
+			"category": "RTW",
+			"color": "Black",
+			"size": "XL",
+			"qty": 3
+		},
+		{
+			"article": "P2837",
+			"name": "Pullover",
+			"category": "RTW",
+			"color": "White",
+			"size": "M",
+			"qty": 4
+		},
+		{
+			"article": "S3336",
+			"name": "Sneakers",
+			"category": "Shoes",
+			"color": "White",
+			"size": "43",
+			"qty": 3
+		},
+		{
+			"article": "S8487",
+			"name": "Sneakers",
+			"category": "Shoes",
+			"color": "White",
+			"size": "43.5",
+			"qty": 2
+		},
+		{
+			"article": "B2306",
+			"name": "Boots",
+			"category": "Shoes",
+			"color": "Black",
+			"size": "42",
+			"qty": 3
+		},
+		{
+			"article": "B4348",
+			"name": "Boots",
+			"category": "Shoes",
+			"color": "Black",
+			"size": "45.5",
+			"qty": 4
+		},
+		{
+			"article": "HB306",
+			"name": "High-boots",
+			"category": "Shoes",
+			"color": "Black",
+			"size": "42",
+			"qty": 2
+		}
+	]
+}
