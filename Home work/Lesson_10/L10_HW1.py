@@ -19,10 +19,11 @@ class Triangle:
         :return: повертає результат
         '''
         if self.side_a > (self.side_b + self.side_c) or self.side_b > (self.side_a + self.side_c) or self.side_c > (self.side_a + self.side_b):
-            x = 'Існування такого трикутника в Евклідовому просторі не можливе'
+
+            return False
         else:
-            x = 'Існування такого трикутника в Евклідовому просторі можливе'
-        return x
+            return True
+
 
 
     def perimetr(self):
@@ -31,7 +32,7 @@ class Triangle:
         :return: Повертає периметр трикутника якщо він існує
         :return: Відповідь, що його не існує
         '''
-        if self.exists() == 'Існування такого трикутника в Евклідовому просторі можливе':
+        if self.exists() is True:
             perimetr_x = self.side_a + self.side_b + self.side_c
             return perimetr_x
         else:
@@ -44,7 +45,7 @@ class Triangle:
         :return: Повертає площу трикутника якщо він існує
         :return: відповідь, що його не існує
         '''
-        if self.exists() == 'Існування такого трикутника в Евклідовому просторі можливе':
+        if self.exists() is True:
             p = self.perimetr()/2
             s = math.sqrt(p*(p-self.side_a)*(p-self.side_b)*(p-self.side_c))
             return round(s,2)
@@ -58,10 +59,10 @@ class Triangle:
         :return: повертає інформацію про трикутник якщо він існує
         :return: відповідь, що його не існує
         '''
-        if self.exists() == 'Існування такого трикутника в Евклідовому просторі можливе':
-            return f'{self.exists()}\nПериметр трикутника становить {self.perimetr()} та площа {self.squere()}'
+        if self.exists() is True:
+            return f'Периметр трикутника становить {self.perimetr()} та площа {self.squere()}'
         else:
-            return self.exists()
+            return 'Існування такого трикутника в Евклідовому просторі не можливе'
 
 
 
@@ -78,8 +79,16 @@ if __name__ == '__main__':
         else:
             print('Вкажіть число')
 
-
     print(triangle_x)
-    print(triangle_x.exists())
     print(triangle_x.perimetr())
     print(triangle_x.squere())
+
+
+    # трикутник який існує
+    triangle_y = Triangle(side_a=3, side_b=7, side_c=5)
+    print(triangle_y)
+
+
+    # трикутник який не існує
+    triangle_z = Triangle(side_a=2, side_b=3, side_c=9)
+    print(triangle_z)
